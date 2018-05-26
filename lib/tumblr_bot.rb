@@ -10,8 +10,19 @@ client = Tumblr::Client.new({
 
 
 
-memes = ["https://www.yourtango.com/sites/default/files/styles/header_slider/public/image_blog/spongebobmemesheader.jpg?itok=vaF4bfS7"]
+memes = ["http://runt-of-the-web.com/wordpress/wp-content/uploads/2016/07/college-spongebob-memes.png",
+	"http://runt-of-the-web.com/wordpress/wp-content/uploads/2016/07/depression.jpg",
+	"http://runt-of-the-web.com/wordpress/wp-content/uploads/2016/07/living.png",
+	"https://media0ch-a.akamaihd.net/32/60/20e03975ac968dc0ddef1474fc3a15a0.jpg",
+	"https://media0ch-a.akamaihd.net/12/94/bbc64ff2a54a7d31d3e421973c4c7e0f.jpg"]
 
-memeofminute = "#{memes.sample}"
-
-client.text("anonchildanonchildanonchild", title: "Meme of the Minute:", body: memeofminute)
+	
+	
+	
+	
+while true
+	memeofminute = "#{memes.sample}"
+	client.text("anonchildanonchildanonchild", title: "Meme of the Minute:", body: memeofminute)
+	sleep(3600)
+	#This posts memes every 3600 seconds
+end
